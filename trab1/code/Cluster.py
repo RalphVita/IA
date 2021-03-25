@@ -4,13 +4,15 @@ from SimulatedAnnealing import Annealable
 from sklearn.utils import shuffle
 
 class Cluster(Annealable):
-    def __init__(self, X,k = 1, grupos = None,centroides = None):
+    def __init__(self, X, k, grupos = None,centroides = None):
         self.X = X
         self.grupos = grupos
         self.centroides = centroides
         self.k = k
         if grupos is not None:
             self.GerarCentroide()
+        else:
+            self.GerarGrupos()
 
     def Shuffle(self):
         self.X, self.grupos = shuffle(self.X, self.grupos)
@@ -20,7 +22,7 @@ class Cluster(Annealable):
         self.k = k
 
     def get_grupos(self):
-        return np.unique(self.grupos)
+        return np.arange(0,self.k)
     
     def GerarGrupos(self):
         self.grupos = np.random.randint(0,self.k,len(self.X))
@@ -50,7 +52,7 @@ class Cluster(Annealable):
         new_grupos = self.grupos.copy()
 
         index = random.randint(0, len(new_grupos)-1)
-        while new_grupos[index] == self.grupos[index]:
+        while new_grupos[index] == self.grupos[index] or len(np.unique(new_grupos)) < self.k:
             new_grupos[index] = random.randint(0, self.k - 1)
 
         #print(index,self.grupos[index],new_grupos[index])
