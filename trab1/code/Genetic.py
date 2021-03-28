@@ -27,6 +27,13 @@ class Genetic(Trainable):
         self.elite_pct = elite_pct
         self.solution : Mutable = None
 
+    def Execute(self, parameters):# -> (float):
+        self.pop_size = parameters['pop_size'] 
+        self.cross_ratio = parameters['cross_ratio']
+        self.mut_ratio = parameters['mut_ratio']
+        self.max_time = parameters['max_time']
+        
+        return self.Run().Value()
 
     def Run(self):
         start = time.process_time()

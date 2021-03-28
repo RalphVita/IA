@@ -1,14 +1,16 @@
 import numpy as np
 import random
 from SimulatedAnnealing import Annealable
+from HillClimbing import Scalable
 from sklearn.utils import shuffle
 
-class Cluster(Annealable):
+class Cluster(Annealable, Scalable):
     def __init__(self, X, k, grupos = None,centroides = None):
         self.X = X
         self.grupos = grupos
         self.centroides = centroides
         self.k = k
+        self.sse = 0
         if grupos is not None:
             self.GerarCentroide()
         else:
@@ -24,6 +26,10 @@ class Cluster(Annealable):
     def get_grupos(self):
         return np.arange(0,self.k)
     
+    def set_grupos(self, grupos):
+        self.grupos =  grupos
+        self.GerarCentroide()
+    
     def GerarGrupos(self):
         length = len(self.X)
         repeat = int(length/self.k) + 1
@@ -35,6 +41,7 @@ class Cluster(Annealable):
 
     def GerarCentroide(self):
         self.centroides = np.array([sum(self.X[self.grupos == g])/len(self.X[self.grupos == g]) for g in self.get_grupos()])
+        self.SSE()
 
     
     ####### Distancia Euclidia ##########
@@ -42,7 +49,8 @@ class Cluster(Annealable):
         return sum([np.linalg.norm(x-centroide) for x in X])
 
     def SSE(self):
-        return sum([self.SomaDistanciaEuclidia(self.X[self.grupos == g],self.centroides[g]) for g in self.get_grupos()])
+        self.sse = sum([self.SomaDistanciaEuclidia(self.X[self.grupos == g],self.centroides[g]) for g in self.get_grupos()])
+        return self.sse
 
     def Show(self):
         print('Grupos:', self.grupos)
@@ -51,7 +59,7 @@ class Cluster(Annealable):
 
     ##### Annealable ######
     def Value(self):
-        return self.SSE()
+        return self.sse
 
     def GerarVizinho(self):
         return self.Mutation()
@@ -78,6 +86,33 @@ class Cluster(Annealable):
             daug.Mutation()
 
         return son, daug
+    
+    def get_number_states(self):
+        return self.k
+    
+    def ChangeState(self, index, value):
+        new_grupos = self.grupos.copy()
+
+        old_value = new_grupos[index]
+        new_value = old_value + value
+
+        if(new_value < 0):
+            new_grupos[index] = self.k-1
+        elif new_value >= self.k:
+            new_grupos[index] =  0
+        else:
+            new_grupos[index] = new_value
+        
+        #Verifica se continua com K grupos
+        if len(np.unique(new_grupos)) < self.k:
+            new_grupos[index] = old_value #Volta so estado anterior, mantendo K grupos
+
+        return Cluster(
+            X = self.X, 
+            k = self.k, 
+            grupos = new_grupos
+        )
+
 
     def Mutation(self):
         new_grupos = self.grupos.copy()

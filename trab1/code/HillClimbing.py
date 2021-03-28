@@ -1,41 +1,49 @@
 
 import time
+from Training import Trainable
 
 class Scalable:
     def Value(self):
         pass
-    def GenerateStates(self):
+    def GerarVizinho(self):
+        pass
+    def get_number_states(self):
         pass
 
 class HillClimbing(Trainable):
-    def __init__(self, state : Scalable,t = 500,alfa=0.95,iter_max = 500, max_time = 1):
-        Trainable.__init__(self, 'Simulated Annealing')
+    def __init__(self, state : Scalable, numBest = 15, max_time = 1):
+        Trainable.__init__(self, 'Hill Climbing')
         self.state = state 
-        self.t = t 
-        self.alfa = alfa
-        self.iter_max = iter_max
+        self.numBest = numBest
         self.max_time = max_time
         self.solution : Annealable = None
 
-def Run(self):#max_size, items, max_time):
-    start = time.process_time()
-    current_state = self.state
-    self.solution = current_state
-    optimal_value = self.solution.Value()
-    end = 0
+    def Run(self):#max_size, items, max_time):
+        start = time.process_time()
+        current_state = self.state
+        self.solution = current_state
+        optimal_value = self.solution.Value()
+        end = 0
 
-    while end-start <= max_time:
-        possible_states = current_state.GenerateStates()
+        while end-start <= self.max_time:
+            possible_states = self.GenerateNeighborhood(current_state)
 
-        for state in possible_states:
-            aux_val = state.Value()
-            if aux_val < optimal_value:
-                optimal_value = aux_val
-                optimal_state = state
-                current_state = state
+            for state in possible_states:
+                aux_val = state.Value()
+                if aux_val < optimal_value:
+                    optimal_value = aux_val
+                    self.solution = state
+                    current_state = state
 
-        end = time.process_time()
-        #TODO saida na convergencia
-        #if(optimal_value == )
+            end = time.process_time()
+            #Saida na convergencia
+            #if(optimal_state.Equal())
+        #self.solution = optimal_state
+        return self.solution
 
-    return optimal_state, optimal_size, optimal_value
+    def GenerateNeighborhood(self, state):
+        neighborhood = []
+        for i in range(2*state.get_number_states()):
+            neighborhood.append(state.GerarVizinho())
+        
+        return neighborhood
