@@ -1,6 +1,7 @@
 import time
 import math
 import random
+from Training import Trainable
 
 class Annealable:
     def Value(self):
@@ -8,8 +9,9 @@ class Annealable:
     def GerarVizinho(self):# -> Annealable:
         pass
 
-class SimulatedAnnealing:
-    def __init__(self, state : Annealable,t,alfa,iter_max,max_time):
+class SimulatedAnnealing(Trainable):
+    def __init__(self, state : Annealable,t = 500,alfa=0.95,iter_max = 500, max_time = 1):
+        Trainable.__init__(self, 'Simulated Annealing')
         self.state = state 
         self.t = t 
         self.alfa = alfa
@@ -19,8 +21,9 @@ class SimulatedAnnealing:
 
 
     def Run(self):
-        self.solution = self.state
-        max_value = self.solution.Value()
+        #Solução temporaria = Melhor solução geral até agora = estado inicial
+        solution = self.solution = self.state
+        max_value = solution.Value()
 
         start = time.process_time()
         end = 0
@@ -29,15 +32,18 @@ class SimulatedAnnealing:
 
         while t >= 1:
             for _ in range(self.iter_max):
-                vizinho = self.solution.GerarVizinho()
+                vizinho = solution.GerarVizinho()
                 if vizinho == None:
                     return self.solution
                 
                 vizinho_v = vizinho.Value()
-                solution_v = self.solution.Value()
+                solution_v = solution.Value()
 
                 if vizinho_v < solution_v or self.change_probability(vizinho_v,solution_v,t):
-                    self.solution = vizinho
+                    solution = vizinho
+                    #Se melhor que a melhor solução geral até agora
+                    if vizinho_v < self.solution.Value():
+                        self.solution = vizinho
 
                 cont = cont+1
 
@@ -51,7 +57,14 @@ class SimulatedAnnealing:
         
         print('Iterações:',cont)
         return self.solution
-              
+
+    def Execute(self, parameters):# -> (float):
+        self.t = parameters['t'] 
+        self.alfa = parameters['alfa']
+        self.iter_max = parameters['iter_max']
+        self.max_time = parameters['max_time']
+        
+        return self.Run().Value()
   
     # Probabilidade de aceitar mudança para pior estado
     def change_probability(self,value,best_value,t):
