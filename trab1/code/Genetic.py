@@ -2,6 +2,7 @@ import random
 import time
 import math
 from Training import Trainable
+from Roleta import roulette_construction, roulette_run
 
 class Mutable:
     def Value(self):
@@ -94,51 +95,10 @@ class Genetic(Trainable):
         return elite
 
     def selection(self, population,n):
-        aux_population = self.roulette_construction(population)
-        new_population = self.roulette_run(n, aux_population)
+        aux_population = roulette_construction(population)
+        new_population = roulette_run(n, aux_population)
         return new_population
 
-    ### Roleta ###
-
-    # Rodar a roleta
-    def roulette_run (self,rounds, roulette):
-        if roulette == []:
-            return []
-        selected = []
-        #print(rounds, roulette)
-        while len(selected) < rounds:
-            r = random.uniform(0,1)
-            for state in roulette:
-                if r <= state[0]:
-                    selected.append(state[1])
-                    break
-        return selected
-
-    def roulette_construction(self, states):
-        aux_states = []
-        roulette = []
-        #Valores de todos estados
-        values = [s.Value() for s in states]
-        total_values = sum(values)
-        total_values = total_values if total_values != 0 else 1
-
-        #Inverte a porcentagem, dando prioridade aos menores e soma o total
-        total_invert = sum(1-values/total_values)
-
-        for state in states:
-            value = state.Value()
-            if total_invert != 0:
-                ratio = (1-value/total_values)/total_invert
-            else:
-                ratio = 1
-            aux_states.append((ratio,state))
-    
-        acc_value = 0
-        for state in aux_states:
-            acc_value = acc_value + state[0]
-            s = (acc_value,state[1])
-            roulette.append(s)
-        return roulette
 
     # Etapa de Recombinação
     def crossover_step (self, population):

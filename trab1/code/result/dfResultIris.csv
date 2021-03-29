@@ -1,0 +1,271 @@
+,Heuristica,Configuração,Média,Desvio Padrão,Tempo médio,K,Problema
+0,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",281.81516068206116,2.272104376781432,1.015625,3,Iris
+1,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",281.081935096793,4.670198707189706,1.015625,3,Iris
+2,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",281.7486490760096,2.3268940782179364,1.0171875,3,Iris
+3,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",281.4216705473681,2.5073131727561684,1.015625,3,Iris
+4,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",283.4203222897622,2.5930817328072147,1.015625,3,Iris
+5,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",282.6278172594569,2.6529411323964744,1.015625,3,Iris
+6,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",281.15946374693283,2.9591367393823647,1.015625,3,Iris
+7,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",280.03780039194635,4.019382058916561,1.015625,3,Iris
+8,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",281.76809712562465,3.5523547447147656,1.015625,3,Iris
+9,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",281.2228715728421,4.383852707240351,1.015625,3,Iris
+10,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",280.3154704786824,3.7352068037507435,1.015625,3,Iris
+11,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",283.2605318969598,2.5260164868409407,1.015625,3,Iris
+12,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",282.76788536323716,4.175055895433036,1.015625,3,Iris
+13,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",281.94291382842135,3.55127416953351,1.015625,3,Iris
+14,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",282.6158799333645,2.3082953486375852,1.015625,3,Iris
+15,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",281.91961421697306,3.404631641317039,1.015625,3,Iris
+16,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",282.44654865257337,2.4252720427702155,1.015625,3,Iris
+17,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",280.86139660900585,4.948658738139103,1.015625,3,Iris
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",286.11828848608036,3.0683193046780155,0.5546875,3,Iris
+1,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",278.9924884208464,6.1103779577327275,0.853125,3,Iris
+2,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",286.2139771833813,2.7688295482945113,0.6375,3,Iris
+3,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",277.7846365144047,3.3343313656085036,0.95625,3,Iris
+4,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",284.7166194998641,2.768425572505428,0.803125,3,Iris
+5,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",279.2920254043664,2.805349887779024,1.0171875,3,Iris
+6,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",285.69327714043254,1.3890601755904226,1.0328125,3,Iris
+7,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",283.8027087829808,1.41684814756811,1.0328125,3,Iris
+8,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",285.4173672792345,1.1945074918169305,1.0296875,3,Iris
+9,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",284.9850339104729,1.1638078056938694,1.0375,3,Iris
+10,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",285.9647463967816,1.537736727980697,1.0203125,3,Iris
+11,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",285.17324799064266,1.3932958912028852,1.0390625,3,Iris
+12,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",286.88871228639573,0.8285091911802553,1.046875,3,Iris
+13,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",286.14284509683256,0.6281800590852618,1.040625,3,Iris
+14,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",286.9757098711914,0.926729160254531,1.0359375,3,Iris
+15,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",286.8776652419286,0.593464851887233,1.0453125,3,Iris
+16,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",287.0546713728342,0.7690895702028924,1.0453125,3,Iris
+17,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",286.88449183299946,0.6643572012817028,1.0390625,3,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",288.58550099940504,0.051538187266717654,1.028125,3,Iris
+1,Grasp,"{'numIter': 20, 'numBest': 10, 'max_time': 1}",288.53686413998355,0.38648205971907673,1.053125,3,Iris
+2,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",288.67812852672324,0.06533015125643232,1.0671875,3,Iris
+3,Grasp,"{'numIter': 50, 'numBest': 5, 'max_time': 1}",288.73875644286306,0.0,1.025,3,Iris
+4,Grasp,"{'numIter': 50, 'numBest': 10, 'max_time': 1}",289.100445154343,0.2764747709957414,1.040625,3,Iris
+5,Grasp,"{'numIter': 50, 'numBest': 15, 'max_time': 1}",289.3575133081539,0.0,1.0484375,3,Iris
+6,Grasp,"{'numIter': 100, 'numBest': 5, 'max_time': 1}",289.238771032539,0.3462081951349747,1.01875,3,Iris
+7,Grasp,"{'numIter': 100, 'numBest': 10, 'max_time': 1}",289.3575133081539,0.0,1.0265625,3,Iris
+8,Grasp,"{'numIter': 100, 'numBest': 15, 'max_time': 1}",289.3575133081539,0.0,1.0515625,3,Iris
+9,Grasp,"{'numIter': 200, 'numBest': 5, 'max_time': 1}",289.10564041588503,0.37669253834726535,1.0265625,3,Iris
+10,Grasp,"{'numIter': 200, 'numBest': 10, 'max_time': 1}",289.3575133081539,0.0,1.034375,3,Iris
+11,Grasp,"{'numIter': 200, 'numBest': 15, 'max_time': 1}",289.3575133081539,0.0,1.040625,3,Iris
+12,Grasp,"{'numIter': 350, 'numBest': 5, 'max_time': 1}",289.1754255788227,0.3667708732567254,1.021875,3,Iris
+13,Grasp,"{'numIter': 350, 'numBest': 10, 'max_time': 1}",289.3575133081539,0.0,1.034375,3,Iris
+14,Grasp,"{'numIter': 350, 'numBest': 15, 'max_time': 1}",289.3575133081539,0.0,1.05,3,Iris
+15,Grasp,"{'numIter': 500, 'numBest': 5, 'max_time': 1}",289.39054029219176,0.246913200995721,1.0234375,3,Iris
+16,Grasp,"{'numIter': 500, 'numBest': 10, 'max_time': 1}",289.3575133081539,0.0,1.028125,3,Iris
+17,Grasp,"{'numIter': 500, 'numBest': 15, 'max_time': 1}",289.3575133081539,0.0,1.0390625,3,Iris
+0,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",270.80080253442884,7.6346236383438635,1.015625,7,Iris
+1,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",273.57790717209355,3.3924637171839813,1.015625,7,Iris
+2,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",269.93002174880587,5.642211101771592,1.015625,7,Iris
+3,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",272.6914150818576,2.7932726714583787,1.015625,7,Iris
+4,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",272.8986053703911,4.5321725441103835,1.015625,7,Iris
+5,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",274.55253515868947,5.71972332929476,1.015625,7,Iris
+6,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",270.9162658853912,3.7094130431498193,1.015625,7,Iris
+7,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",273.00163918685604,4.1012519615444285,1.015625,7,Iris
+8,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",272.5959740149377,4.234154857349332,1.015625,7,Iris
+9,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",272.98240952119966,4.755834340855485,1.015625,7,Iris
+10,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",273.0255989214077,4.649468879412196,1.015625,7,Iris
+11,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",274.56024577447135,5.250446222555504,1.015625,7,Iris
+12,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",274.45369083199273,1.7041824352969064,1.015625,7,Iris
+13,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",275.230551297362,3.3638946355580717,1.015625,7,Iris
+14,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",273.09508604863396,3.89852793554276,1.015625,7,Iris
+15,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",274.4018738809328,5.9724905016762415,1.015625,7,Iris
+16,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",270.65194372746436,6.821870792680501,1.015625,7,Iris
+17,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",274.4044981550819,2.917069618105458,1.015625,7,Iris
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",279.2859423853529,4.940715957635055,0.8078125,7,Iris
+1,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",273.5698386221428,4.5376781143213565,1.01875,7,Iris
+2,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",278.7047856916051,3.957436487536113,0.9578125,7,Iris
+3,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",274.9293531907806,3.950689029511192,0.984375,7,Iris
+4,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",281.405391229244,2.9688456508655,0.775,7,Iris
+5,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",275.3439568246575,2.474622202259433,1.0171875,7,Iris
+6,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",281.6240565058579,1.6635240111845981,1.0265625,7,Iris
+7,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",280.38505349576087,1.8284681302335493,1.0296875,7,Iris
+8,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",281.76605418396645,1.1211658578168615,1.0359375,7,Iris
+9,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",280.6078390663193,2.059415954159423,1.028125,7,Iris
+10,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",281.94059500118107,1.105971604485196,1.03125,7,Iris
+11,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",282.2889392866589,1.0634370596437215,1.03125,7,Iris
+12,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",283.3562657065725,0.5717073714166964,1.0421875,7,Iris
+13,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",282.8069989980969,1.252823777312572,1.0421875,7,Iris
+14,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",283.0378389649486,0.7204895502122146,1.0515625,7,Iris
+15,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",283.5131837499908,1.0727963762072095,1.0453125,7,Iris
+16,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",283.54763275924216,0.7717476718386852,1.04375,7,Iris
+17,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",282.9562938244911,1.1860656081012384,1.0421875,7,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",285.3293938494693,0.16435297708247953,1.0578125,7,Iris
+1,Grasp,"{'numIter': 20, 'numBest': 10, 'max_time': 1}",285.11095861432307,0.2650990949316154,1.0671875,7,Iris
+2,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",285.5395748374533,0.3478407574378674,1.059375,7,Iris
+3,Grasp,"{'numIter': 50, 'numBest': 5, 'max_time': 1}",285.76903720370103,0.01717831001527088,1.0390625,7,Iris
+4,Grasp,"{'numIter': 50, 'numBest': 10, 'max_time': 1}",286.2321974009156,0.0,1.0546875,7,Iris
+5,Grasp,"{'numIter': 50, 'numBest': 15, 'max_time': 1}",286.2321974009156,0.0,1.059375,7,Iris
+6,Grasp,"{'numIter': 100, 'numBest': 5, 'max_time': 1}",286.04036982606857,0.20553851288564617,1.028125,7,Iris
+7,Grasp,"{'numIter': 100, 'numBest': 10, 'max_time': 1}",286.2321974009156,0.0,1.0265625,7,Iris
+8,Grasp,"{'numIter': 100, 'numBest': 15, 'max_time': 1}",286.2321974009156,0.0,1.0703125,7,Iris
+9,Grasp,"{'numIter': 200, 'numBest': 5, 'max_time': 1}",286.2321974009156,0.0,1.0296875,7,Iris
+10,Grasp,"{'numIter': 200, 'numBest': 10, 'max_time': 1}",286.2321974009156,0.0,1.03125,7,Iris
+11,Grasp,"{'numIter': 200, 'numBest': 15, 'max_time': 1}",286.2321974009156,0.0,1.059375,7,Iris
+12,Grasp,"{'numIter': 350, 'numBest': 5, 'max_time': 1}",286.138420140805,0.18755452022119243,1.0359375,7,Iris
+13,Grasp,"{'numIter': 350, 'numBest': 10, 'max_time': 1}",286.2321974009156,0.0,1.0328125,7,Iris
+14,Grasp,"{'numIter': 350, 'numBest': 15, 'max_time': 1}",286.2321974009156,0.0,1.0625,7,Iris
+15,Grasp,"{'numIter': 500, 'numBest': 5, 'max_time': 1}",286.11856540180287,0.1804453825066461,1.0359375,7,Iris
+16,Grasp,"{'numIter': 500, 'numBest': 10, 'max_time': 1}",286.2321974009156,0.0,1.034375,7,Iris
+17,Grasp,"{'numIter': 500, 'numBest': 15, 'max_time': 1}",286.2321974009156,0.0,1.06875,7,Iris
+0,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",268.7693847715148,4.644010019770746,1.015625,10,Iris
+1,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",264.78545359277894,5.840891979679793,1.015625,10,Iris
+2,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",269.5391751652769,4.137264889111304,1.015625,10,Iris
+3,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",266.53030733852296,6.996121108104644,1.015625,10,Iris
+4,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",264.96697615750855,7.318365075518489,1.015625,10,Iris
+5,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",266.41140310363073,4.939735014794866,1.015625,10,Iris
+6,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",268.80613009847355,5.293365156902006,1.015625,10,Iris
+7,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",266.44859022433513,5.137355978315825,1.015625,10,Iris
+8,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",267.2677565142858,4.711472281911906,1.015625,10,Iris
+9,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",267.04685726320076,4.409426764708412,1.015625,10,Iris
+10,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",266.2318522511023,5.840319314190126,1.015625,10,Iris
+11,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",266.1107988661493,6.060322665129642,1.015625,10,Iris
+12,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",266.672178806193,5.3020196673533935,1.015625,10,Iris
+13,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",268.600328609717,5.453743814102098,1.015625,10,Iris
+14,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",269.02028347621325,8.225374614581632,1.015625,10,Iris
+15,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",266.7242705087229,6.618956722490529,1.015625,10,Iris
+16,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",270.46835675685645,2.4924698485383145,1.015625,10,Iris
+17,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",271.3633414348611,2.9003287455381517,1.015625,10,Iris
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",273.53926285991093,6.2111638567179,0.6515625,10,Iris
+1,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",268.5414243110496,3.9518565882264958,0.9109375,10,Iris
+2,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",274.5725521528481,4.988282593485026,0.6953125,10,Iris
+3,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",266.8222183579004,3.0732032000347616,1.0203125,10,Iris
+4,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",276.1259827123748,4.394675057620208,0.665625,10,Iris
+5,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",266.1260853333506,2.3931559437068333,1.0203125,10,Iris
+6,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",274.34609669637473,2.5900575113677364,1.0328125,10,Iris
+7,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",273.1332596059705,2.1489995373120085,1.034375,10,Iris
+8,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",275.33899680886316,1.9883476465525178,1.0328125,10,Iris
+9,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",273.6436376896283,2.190898529435254,1.034375,10,Iris
+10,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",275.82276735710445,2.369792910317456,1.034375,10,Iris
+11,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",274.63082566382684,1.8796884073737572,1.04375,10,Iris
+12,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",277.73985271990983,1.6874309396449967,1.0515625,10,Iris
+13,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",276.23482786197394,1.5008006007627177,1.053125,10,Iris
+14,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",276.90851759508934,1.3338217603004567,1.0515625,10,Iris
+15,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",277.2786374265244,1.2502716301375991,1.046875,10,Iris
+16,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",277.29410953997495,1.447738196342116,1.0421875,10,Iris
+17,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",277.1065259349763,1.4569287697808475,1.0671875,10,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",280.37421832246525,0.16390575165700152,1.05625,10,Iris
+1,Grasp,"{'numIter': 20, 'numBest': 10, 'max_time': 1}",279.3600324984985,0.16470726589956625,1.065625,10,Iris
+2,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",279.5621654659784,0.23039760744698312,1.065625,10,Iris
+3,Grasp,"{'numIter': 50, 'numBest': 5, 'max_time': 1}",280.6554455740928,0.13544398956909828,1.0484375,10,Iris
+4,Grasp,"{'numIter': 50, 'numBest': 10, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.0421875,10,Iris
+5,Grasp,"{'numIter': 50, 'numBest': 15, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.0765625,10,Iris
+6,Grasp,"{'numIter': 100, 'numBest': 5, 'max_time': 1}",280.81419260937275,0.1368040035057673,1.0359375,10,Iris
+7,Grasp,"{'numIter': 100, 'numBest': 10, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.0265625,10,Iris
+8,Grasp,"{'numIter': 100, 'numBest': 15, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.05625,10,Iris
+9,Grasp,"{'numIter': 200, 'numBest': 5, 'max_time': 1}",280.89356612701266,5.684341886080802e-14,1.03125,10,Iris
+10,Grasp,"{'numIter': 200, 'numBest': 10, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.0328125,10,Iris
+11,Grasp,"{'numIter': 200, 'numBest': 15, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.0859375,10,Iris
+12,Grasp,"{'numIter': 350, 'numBest': 5, 'max_time': 1}",280.848830681878,0.10495842013656193,1.040625,10,Iris
+13,Grasp,"{'numIter': 350, 'numBest': 10, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.06875,10,Iris
+14,Grasp,"{'numIter': 350, 'numBest': 15, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.0640625,10,Iris
+15,Grasp,"{'numIter': 500, 'numBest': 5, 'max_time': 1}",280.8531610916273,0.10343100305468163,1.046875,10,Iris
+16,Grasp,"{'numIter': 500, 'numBest': 10, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.0328125,10,Iris
+17,Grasp,"{'numIter': 500, 'numBest': 15, 'max_time': 1}",279.9413655663864,5.684341886080802e-14,1.0875,10,Iris
+0,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",263.06860653127666,6.961942611065423,1.015625,13,Iris
+1,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",264.8052519558374,3.0857351792577266,1.015625,13,Iris
+2,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",261.6651593756704,8.227320866691562,1.015625,13,Iris
+3,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",260.67410659882137,3.967185519324116,1.015625,13,Iris
+4,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",264.24768872423,5.540462180766062,1.015625,13,Iris
+5,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",262.881292147058,3.98503705422907,1.015625,13,Iris
+6,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",261.50857773839834,4.991192733081497,1.015625,13,Iris
+7,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",263.1908315262151,5.129433822370069,1.015625,13,Iris
+8,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",265.1521854722471,4.190702964850735,1.015625,13,Iris
+9,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",264.2118774014506,3.8674563934608384,1.015625,13,Iris
+10,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",262.44139382180765,5.114545744612496,1.015625,13,Iris
+11,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",263.40416745034645,4.956338363507619,1.0171875,13,Iris
+12,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",261.58523899657473,6.521282266783095,1.015625,13,Iris
+13,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",261.49488442617155,5.42435170921431,1.015625,13,Iris
+14,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",261.78033653809086,4.773206279836811,1.015625,13,Iris
+15,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",260.9927083266648,5.387931139442221,1.015625,13,Iris
+16,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",261.2729060609119,6.631268458032036,1.015625,13,Iris
+17,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",260.46732183410575,4.4677256949951065,1.015625,13,Iris
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",273.5909570322277,4.69769926771866,0.853125,13,Iris
+1,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",269.2579757392067,5.469577800307915,0.9234375,13,Iris
+2,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",277.19799391578584,4.436773390523645,0.640625,13,Iris
+3,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",269.37885609527996,5.6087800802006695,0.925,13,Iris
+4,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",275.29292351322437,3.6835575920142594,0.78125,13,Iris
+5,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",271.7874837178625,4.471931159671134,0.884375,13,Iris
+6,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",275.73490482130757,2.068193003330881,1.028125,13,Iris
+7,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",275.212636668943,1.306253250290932,1.03125,13,Iris
+8,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",276.6372280298032,2.1921664096943627,1.0359375,13,Iris
+9,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",277.02065079365104,0.9305788238917941,1.034375,13,Iris
+10,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",277.8218123375859,0.738458927406547,1.0265625,13,Iris
+11,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",275.40455241320956,1.5439212075484958,1.03125,13,Iris
+12,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",276.9300082699543,1.2595632537212733,1.0484375,13,Iris
+13,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",277.101792256004,1.1361912805367063,1.053125,13,Iris
+14,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",278.5039008641668,1.1817372243758426,1.0453125,13,Iris
+15,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",277.8789382562003,1.1130140401964954,1.059375,13,Iris
+16,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",278.3215173524665,1.2506631899708345,1.05625,13,Iris
+17,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",277.75021498972285,1.294561798948129,1.05625,13,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",280.02926477181757,0.10601247051966169,1.084375,13,Iris
+1,Grasp,"{'numIter': 20, 'numBest': 10, 'max_time': 1}",280.08849368073265,0.11310161466830197,1.071875,13,Iris
+2,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",280.60000997910674,0.22014733120211344,1.0640625,13,Iris
+3,Grasp,"{'numIter': 50, 'numBest': 5, 'max_time': 1}",280.4558891363581,0.11973243494019929,1.046875,13,Iris
+4,Grasp,"{'numIter': 50, 'numBest': 10, 'max_time': 1}",280.72502363612836,0.0,1.0609375,13,Iris
+5,Grasp,"{'numIter': 50, 'numBest': 15, 'max_time': 1}",280.72502363612836,0.0,1.046875,13,Iris
+6,Grasp,"{'numIter': 100, 'numBest': 5, 'max_time': 1}",280.72502363612836,0.0,1.0484375,13,Iris
+7,Grasp,"{'numIter': 100, 'numBest': 10, 'max_time': 1}",280.72502363612836,0.0,1.0578125,13,Iris
+8,Grasp,"{'numIter': 100, 'numBest': 15, 'max_time': 1}",280.72502363612836,0.0,1.0484375,13,Iris
+9,Grasp,"{'numIter': 200, 'numBest': 5, 'max_time': 1}",280.68203464392724,0.10348241958057539,1.0640625,13,Iris
+10,Grasp,"{'numIter': 200, 'numBest': 10, 'max_time': 1}",280.72502363612836,0.0,1.046875,13,Iris
+11,Grasp,"{'numIter': 200, 'numBest': 15, 'max_time': 1}",280.72502363612836,0.0,1.05,13,Iris
+12,Grasp,"{'numIter': 350, 'numBest': 5, 'max_time': 1}",280.67638539237635,0.10716231770652908,1.0515625,13,Iris
+13,Grasp,"{'numIter': 350, 'numBest': 10, 'max_time': 1}",280.72502363612836,0.0,1.0609375,13,Iris
+14,Grasp,"{'numIter': 350, 'numBest': 15, 'max_time': 1}",280.72502363612836,0.0,1.0625,13,Iris
+15,Grasp,"{'numIter': 500, 'numBest': 5, 'max_time': 1}",280.69065203367506,0.10311480735980467,1.0484375,13,Iris
+16,Grasp,"{'numIter': 500, 'numBest': 10, 'max_time': 1}",280.72502363612836,0.0,1.0546875,13,Iris
+17,Grasp,"{'numIter': 500, 'numBest': 15, 'max_time': 1}",280.72502363612836,0.0,1.0515625,13,Iris
+0,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",248.01637005573488,5.6126889279669205,1.015625,22,Iris
+1,Simulated Annealing,"{'t': 500, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",245.04814649949031,4.923148485826552,1.015625,22,Iris
+2,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",248.88283265596138,3.6608389549499094,1.015625,22,Iris
+3,Simulated Annealing,"{'t': 500, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",251.1501163056549,5.19600619121122,1.015625,22,Iris
+4,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",250.09337850766593,7.219193072063796,1.015625,22,Iris
+5,Simulated Annealing,"{'t': 500, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",250.26649768035108,2.796103487431662,1.015625,22,Iris
+6,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",248.33470249111133,6.100301230493831,1.015625,22,Iris
+7,Simulated Annealing,"{'t': 100, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",246.4274253595282,5.563572063852336,1.015625,22,Iris
+8,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",249.13266442117757,6.012853933389324,1.015625,22,Iris
+9,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",247.9116784447762,7.55907739131438,1.015625,22,Iris
+10,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",244.99336579400065,5.064593414362945,1.015625,22,Iris
+11,Simulated Annealing,"{'t': 100, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",247.32851259081045,7.4730968471865005,1.015625,22,Iris
+12,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 350, 'max_time': 1}",249.23669631431932,5.771741435166398,1.015625,22,Iris
+13,Simulated Annealing,"{'t': 50, 'alfa': 0.95, 'iter_max': 500, 'max_time': 1}",251.35375239719207,3.0888090041744216,1.015625,22,Iris
+14,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 350, 'max_time': 1}",250.07227379343726,5.867001898216086,1.015625,22,Iris
+15,Simulated Annealing,"{'t': 50, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",250.75250893730362,4.953130919427459,1.015625,22,Iris
+16,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 350, 'max_time': 1}",245.9244565297151,4.069126486969487,1.015625,22,Iris
+17,Simulated Annealing,"{'t': 50, 'alfa': 0.7, 'iter_max': 500, 'max_time': 1}",246.99351997471393,6.167005168408116,1.015625,22,Iris
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",254.86376756915234,3.91905710184679,0.8234375,22,Iris
+1,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",245.62148091831418,2.465508592927742,1.021875,22,Iris
+2,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",255.9847618258763,5.064104832590071,0.6953125,22,Iris
+3,Genético,"{'pop_size': 10, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",249.3982682061598,2.6777071468892846,1.0203125,22,Iris
+4,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",256.97616116428287,4.874340546356141,0.703125,22,Iris
+5,Genético,"{'pop_size': 10, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",250.8078454996628,4.743578550819919,1.028125,22,Iris
+6,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",255.78846520538247,2.921038312923707,1.040625,22,Iris
+7,Genético,"{'pop_size': 30, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",253.51064236537042,1.3896044756982582,1.0359375,22,Iris
+8,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",255.90499592317101,1.5943531276024987,1.034375,22,Iris
+9,Genético,"{'pop_size': 30, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",254.44809793255186,2.844092811476013,1.0390625,22,Iris
+10,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",257.1889123729776,1.520142496696616,1.0421875,22,Iris
+11,Genético,"{'pop_size': 30, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",255.78637550657695,2.6431519770840124,1.0375,22,Iris
+12,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.1, 'max_time': 1}",258.5707671135764,1.2334476314380458,1.0515625,22,Iris
+13,Genético,"{'pop_size': 50, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",258.3064610445661,1.8991434122464974,1.0453125,22,Iris
+14,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.1, 'max_time': 1}",258.549840458141,0.7958691002203988,1.040625,22,Iris
+15,Genético,"{'pop_size': 50, 'cross_ratio': 0.85, 'mut_ratio': 0.2, 'max_time': 1}",257.9449172107694,1.8829052540236868,1.053125,22,Iris
+16,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.1, 'max_time': 1}",259.1177204422766,1.7176172706279966,1.0765625,22,Iris
+17,Genético,"{'pop_size': 50, 'cross_ratio': 0.95, 'mut_ratio': 0.2, 'max_time': 1}",257.5525882820957,1.3077753256202085,1.08125,22,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",259.6216200943476,0.2038740645446467,1.0984375,22,Iris
+1,Grasp,"{'numIter': 20, 'numBest': 10, 'max_time': 1}",260.2352575820291,0.2874691220462568,1.1265625,22,Iris
+2,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.08125,22,Iris
+3,Grasp,"{'numIter': 50, 'numBest': 5, 'max_time': 1}",260.02088910557836,0.08803531156857197,1.096875,22,Iris
+4,Grasp,"{'numIter': 50, 'numBest': 10, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.065625,22,Iris
+5,Grasp,"{'numIter': 50, 'numBest': 15, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.0640625,22,Iris
+6,Grasp,"{'numIter': 100, 'numBest': 5, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.04375,22,Iris
+7,Grasp,"{'numIter': 100, 'numBest': 10, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.0828125,22,Iris
+8,Grasp,"{'numIter': 100, 'numBest': 15, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.0578125,22,Iris
+9,Grasp,"{'numIter': 200, 'numBest': 5, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.0328125,22,Iris
+10,Grasp,"{'numIter': 200, 'numBest': 10, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.071875,22,Iris
+11,Grasp,"{'numIter': 200, 'numBest': 15, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.078125,22,Iris
+12,Grasp,"{'numIter': 350, 'numBest': 5, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.05625,22,Iris
+13,Grasp,"{'numIter': 350, 'numBest': 10, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.0859375,22,Iris
+14,Grasp,"{'numIter': 350, 'numBest': 15, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.0578125,22,Iris
+15,Grasp,"{'numIter': 500, 'numBest': 5, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.0359375,22,Iris
+16,Grasp,"{'numIter': 500, 'numBest': 10, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.06875,22,Iris
+17,Grasp,"{'numIter': 500, 'numBest': 15, 'max_time': 1}",261.7943223540318,5.684341886080802e-14,1.0703125,22,Iris

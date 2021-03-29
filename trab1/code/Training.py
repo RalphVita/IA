@@ -16,6 +16,7 @@ class Trainable:
         self.hyperparameters = hyperparameters
 
     def Train(self):
+        print(self.name)
         for parameters in self.hyperparameters:
             values = []
             times = []

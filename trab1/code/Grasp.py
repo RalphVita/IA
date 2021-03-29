@@ -11,6 +11,13 @@ class Grasp(Trainable):
         self.numBest = numBest
         self.max_time = max_time
         self.solution : Annealable = None
+    
+    def Execute(self, parameters):# -> (float):
+        self.numIter = parameters['numIter'] 
+        self.numBest = parameters['numBest']
+        self.max_time = parameters['max_time']
+        
+        return self.Run().Value()
 
     def Run(self):
         optimal = self.state
@@ -27,6 +34,7 @@ class Grasp(Trainable):
                 optimal = s
                 optimal_value = s_value
             end = time.process_time()
+        print(iter)
         
         self.solution = optimal
         return self.solution

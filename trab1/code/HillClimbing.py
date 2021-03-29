@@ -1,6 +1,7 @@
 
 import time
 from Training import Trainable
+from Roleta import roulette_construction, roulette_run
 
 class Scalable:
     def Value(self):
@@ -35,15 +36,26 @@ class HillClimbing(Trainable):
                     self.solution = state
                     current_state = state
 
+            best = sorted (possible_states, key = lambda x: x.Value())[:self.numBest]
+            current_state = roulette_run (1, roulette_construction(best))[0]
+
             end = time.process_time()
             #Saida na convergencia
-            #if(optimal_state.Equal())
-        #self.solution = optimal_state
+            if(self.solution.Equal(current_state)):
+                break
         return self.solution
 
     def GenerateNeighborhood(self, state):
         neighborhood = []
-        for i in range(2*state.get_number_states()):
-            neighborhood.append(state.GerarVizinho())
-        
+        for i in range(self.numBest):
+            new_state = state.ChangeState(i,1)
+            neighborhood.append(new_state)
+        for i in range(self.numBest):
+            new_state = state.ChangeState(i,-1)
+            neighborhood.append(new_state)
         return neighborhood
+        # neighborhood = []
+        # for i in range(2*self.numBest):
+        #     neighborhood.append(state.GerarVizinho())
+        
+        # return neighborhood
