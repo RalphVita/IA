@@ -18,7 +18,7 @@ class Mutable:
         pass
 
 class Genetic(Trainable):
-    def __init__(self, state : Mutable,pop_size = 10, cross_ratio = 0.75, mut_ratio = 0.1, max_time = 1, elite_pct = 0.2):
+    def __init__(self, state : Mutable,pop_size = 10, cross_ratio = 0.75, mut_ratio = 0.1, max_time = 1, elite_pct = 0.05):
         Trainable.__init__(self, 'Genético')
         self.state = state 
         self.pop_size = pop_size 
@@ -64,10 +64,11 @@ class Genetic(Trainable):
 
             end = time.process_time()
         self.solution = opt_state
-        print(cont)
+        print(cont, end-start,conv)
         return self.solution
 
     def convergent(self,population):
+        return False
         conv = False
         if population != []:
             base = population[0]
