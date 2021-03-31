@@ -3,7 +3,7 @@ from sklearn.cluster import KMeans
 
 import numpy as np
 from sklearn.datasets import load_iris, load_wine
-from pandas import read_csv
+import pandas as pd
 
 from Cluster import Cluster
 from SimulatedAnnealing import SimulatedAnnealing
@@ -11,7 +11,7 @@ import time
 
 
 
-def Avaliar(cluster, Ks, hParans = hParans, n_vezes = 10):
+def Avaliar(cluster, Ks, n_vezes = 10):
     #Data frame de Resultados
     dfResult = pd.DataFrame(columns=['Heuristica','Configuração','Média','Desvio Padrão','Tempo médio'])
     print(cluster.SSE())
@@ -33,13 +33,14 @@ def Avaliar(cluster, Ks, hParans = hParans, n_vezes = 10):
             times.append(end - start)
 
             #cluster.X = y_kmeans
+            cluster.k = k
             cluster.grupos = kmeans.labels_
             cluster.centroides = kmeans.cluster_centers_
             print(cluster.SSE())
             values.append(cluster.SSE())
 
 
-        result = self.result.append(
+        dfResult = dfResult.append(
         {
             'Heuristica': 'K-means',
             'Configuração': '-',
@@ -49,7 +50,8 @@ def Avaliar(cluster, Ks, hParans = hParans, n_vezes = 10):
         },
             ignore_index=True)
 
-        result.result['K'] = k
+        dfResult['K'] = k
+    return dfResult
 
             
             

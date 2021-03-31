@@ -38,7 +38,7 @@ def Avaliar(cluster, Ks, hParans = hParans, n_vezes = 10):
         grasp.set_hyperparameters(hParans.pararansGr)
 
         #Cria Treino para as Metaheuristicas
-        training = Training([sa,genetic,grasp], n_vezes)
+        training = Training([grasp], n_vezes)
 
         #Roda o treino
         training.Run()

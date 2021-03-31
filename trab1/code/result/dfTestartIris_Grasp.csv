@@ -1,0 +1,11 @@
+,Heuristica,Configuração,Média,Desvio Padrão,Tempo médio,K,Base
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",289.86003028596434,0.07709628242896929,1.0578125,2,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",283.3948282543596,0.2506886272331124,1.06015625,4,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",264.9853168086593,0.5767078514460204,1.06640625,8,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",278.1099463118877,0.20894533226935838,1.07421875,11,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",267.8349828313625,0.384518734130521,1.08984375,15,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",267.36055226437566,0.556087373073489,1.10390625,17,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",246.65232268800634,0.09038484136008734,1.0390625,23,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",244.87835168016804,8.526512829121202e-14,1.06796875,28,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",234.86259587222565,0.16993210915858042,1.1875,32,Iris
+0,Grasp,"{'numIter': 20, 'numBest': 15, 'max_time': 1}",222.33276463305552,0.0,1.2390625,50,Iris
