@@ -76,14 +76,19 @@ class Cluster(Annealable, Scalable):
         #son = self.grupos[:r]+other.grupos[r:]
         #daug = other.grupos[:r]+self.grupos[r:]
 
+        #Se o número de grupos for menor que K cancela esse cruzamento
+        if(len(np.unique(son)) < self.k):
+            son = self.grupos
+        if(len(np.unique(daug)) < self.k):
+            daug = other.grupos
         son, daug = Cluster(X = self.X, k = self.k, grupos=son), Cluster(X = self.X, k = self.k, grupos=daug)
 
         #Se o número de grupos for menor que K, força mutar até ter K grupos
-        while len(np.unique(son.grupos)) < self.k:
-            son.Mutation()
+        # while len(np.unique(son.grupos)) < self.k:
+        #     son.Mutation()
 
-        while len(np.unique(daug.grupos)) < self.k:
-            daug.Mutation()
+        # while len(np.unique(daug.grupos)) < self.k:
+        #     daug.Mutation()
 
         return son, daug
     

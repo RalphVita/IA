@@ -7,7 +7,6 @@ class Trainable:
     #Recebe varias combinações de hyper parâmetros
     def __init__(self,name):
         self.hyperparameters = []
-        self.n = 10
         self.name = name
         self.result = pd.DataFrame(columns=['Heuristica','Configuração','Média','Desvio Padrão','Tempo médio'])
 
@@ -15,12 +14,12 @@ class Trainable:
     def set_hyperparameters(self,hyperparameters):
         self.hyperparameters = hyperparameters
 
-    def Train(self):
+    def Train(self, n = 10):
         print(self.name)
         for parameters in self.hyperparameters:
             values = []
             times = []
-            for _ in range(self.n):
+            for _ in range(n):
                 start = time.process_time()
 
                 #Executa memtaheuristica
@@ -48,13 +47,13 @@ class Trainable:
 
 
 class Training:
-    def __init__(self, problems):
+    def __init__(self, problems, n_vezes = 10):
         self.problems = problems 
+        self.n_vezes = n_vezes
         self.result = pd.DataFrame()
     
     def Run(self):
         for problem in self.problems:
-            self.result = self.result.append(problem.Train())
-        #self.result['z-score'] = self.result.groupby(['Heuristica'])['Média'].transform(lambda x : zscore(x))
+            self.result = self.result.append(problem.Train(self.n_vezes))
 
         return self.result

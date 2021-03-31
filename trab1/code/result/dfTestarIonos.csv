@@ -1,0 +1,31 @@
+,Heuristica,Configuração,Média,Desvio Padrão,Tempo médio,K,Base
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",975.1946457136976,1.2896707855532457,1.015625,2,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",974.9836621066695,0.445263933092447,1.0265625,2,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",976.2042592093128,0.0,1.05546875,2,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",973.0767865723799,1.8857456464954885,1.015625,3,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",973.9580263665255,0.5344398756181676,1.0328125,3,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",974.628864874134,0.05166745432786261,1.0609375,3,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",973.0756809791558,1.0483425809971916,1.015625,5,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",975.4570457562522,0.2859038369530049,1.02578125,5,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",975.5314476347273,1.1368683772161603e-13,1.08359375,5,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",967.4511234928623,1.80047907947965,1.015625,10,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",971.2851291109877,0.6318063652061185,1.03046875,10,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",971.9101468347648,0.0092057547199737,1.11015625,10,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",958.1162699461975,3.2502166991477353,1.015625,15,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",961.0150211463831,0.7960162844365621,1.03125,15,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",961.9785223669248,0.18886592085691017,1.121875,15,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",956.0129091046945,4.433842457813178,1.015625,20,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",962.2371781822436,0.7438268750666114,1.02890625,20,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",962.8865306850024,0.17194521588817574,1.1953125,20,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",949.9429435349175,4.804304712890306,1.015625,25,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",953.1562669317276,0.9947955577557444,1.03671875,25,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",954.3022966459312,0.07680638482477559,1.13359375,25,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",942.2155623903697,4.841857105965522,1.015625,30,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",948.3913517684939,0.8167336747399787,1.034375,30,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",948.5918617262307,0.3114784225930691,1.278125,30,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",934.9205950729954,4.106548511989447,1.015625,40,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",938.9506110494901,1.1125087965678224,1.03359375,40,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",939.618783415834,0.36454266873434643,1.159375,40,Ionosphere
+0,Simulated Annealing,"{'t': 100, 'alfa': 0.85, 'iter_max': 500, 'max_time': 1}",910.3302196417517,4.936175407819809,1.015625,50,Ionosphere
+0,Genético,"{'pop_size': 10, 'cross_ratio': 0.75, 'mut_ratio': 0.2, 'max_time': 1}",913.294361989219,1.666737026306175,1.040625,50,Ionosphere
+0,Grasp,"{'numIter': 20, 'numBest': 5, 'max_time': 1}",914.7284117745573,1.1368683772161603e-13,1.50859375,50,Ionosphere
