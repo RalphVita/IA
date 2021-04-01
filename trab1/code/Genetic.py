@@ -3,30 +3,24 @@ import time
 import math
 from Training import Trainable
 from Roleta import roulette_construction, roulette_run
+from Metaheuristica import Metaheuristica
 
-class Mutable:
-    def Value(self):
-        pass
-    def GerarVizinho(self):
-        pass
-    #Compara dois estados
-    def Equal(self, other):
-        pass
+class IMutable:
     def Crossover(self, other):
         pass
     def Mutation(self):
         pass
 
-class Genetic(Trainable):
-    def __init__(self, state : Mutable,pop_size = 10, cross_ratio = 0.75, mut_ratio = 0.1, max_time = 1, elite_pct = 0.05):
+class Genetic(Metaheuristica, Trainable):
+    def __init__(self, state : IMutable,pop_size = 10, cross_ratio = 0.75, mut_ratio = 0.1, max_time = 1, elite_pct = 0.05):
         Trainable.__init__(self, 'Genético')
-        self.state = state 
+        Metaheuristica.__init__(self,state)
         self.pop_size = pop_size 
         self.cross_ratio = cross_ratio
         self.mut_ratio = mut_ratio
         self.max_time = max_time
         self.elite_pct = elite_pct
-        self.solution : Mutable = None
+        self.solution : IMutable = None
 
     def Execute(self, parameters):# -> (float):
         self.pop_size = parameters['pop_size'] 
@@ -68,7 +62,6 @@ class Genetic(Trainable):
         return self.solution
 
     def convergent(self,population):
-        return False
         conv = False
         if population != []:
             base = population[0]
@@ -83,7 +76,7 @@ class Genetic(Trainable):
         pop = []
         count = 0
         while count < n:
-            individual = self.state.GerarVizinho()
+            individual = self.state.NextState()
             pop = pop + [individual]
             count += 1
         return pop

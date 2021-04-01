@@ -2,22 +2,18 @@ import time
 import math
 import random
 from Training import Trainable
+from IState import IState
+from Metaheuristica import Metaheuristica
 
-class Annealable:
-    def Value(self):
-        pass
-    def GerarVizinho(self):# -> Annealable:
-        pass
-
-class SimulatedAnnealing(Trainable):
-    def __init__(self, state : Annealable,t = 500,alfa=0.95,iter_max = 500, max_time = 1):
+class SimulatedAnnealing(Metaheuristica,Trainable):
+    def __init__(self, state : IState,t = 500,alfa=0.95,iter_max = 500, max_time = 1):
         Trainable.__init__(self, 'Simulated Annealing')
-        self.state = state 
+        Metaheuristica.__init__(self,state)
         self.t = t 
         self.alfa = alfa
         self.iter_max = iter_max
         self.max_time = max_time
-        self.solution : Annealable = None
+        self.solution : IState = None
 
 
     def Run(self):
@@ -32,7 +28,7 @@ class SimulatedAnnealing(Trainable):
 
         while t >= 1:
             for _ in range(self.iter_max):
-                vizinho = solution.GerarVizinho()
+                vizinho = solution.NextState()
                 if vizinho == None:
                     return self.solution
                 

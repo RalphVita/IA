@@ -2,22 +2,15 @@
 import time
 from Training import Trainable
 from Roleta import roulette_construction, roulette_run
-
-class Scalable:
-    def Value(self):
-        pass
-    def GerarVizinho(self):
-        pass
-    def get_number_states(self):
-        pass
+from IState import IState
 
 class HillClimbing(Trainable):
-    def __init__(self, state : Scalable, numBest = 15, max_time = 1):
+    def __init__(self, state : IState, numBest = 15, max_time = 1):
         Trainable.__init__(self, 'Hill Climbing')
         self.state = state 
         self.numBest = numBest
         self.max_time = max_time
-        self.solution : Annealable = None
+        self.solution : IState = None
 
     def Run(self):#max_size, items, max_time):
         start = time.process_time()
@@ -56,6 +49,6 @@ class HillClimbing(Trainable):
         return neighborhood
         # neighborhood = []
         # for i in range(2*self.numBest):
-        #     neighborhood.append(state.GerarVizinho())
+        #     neighborhood.append(state.NextState())
         
         # return neighborhood

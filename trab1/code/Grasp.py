@@ -2,15 +2,17 @@ import time
 from HillClimbing import HillClimbing
 from GradientDescent import GradientDescent
 from Training import Trainable
+from IState import IState
+from Metaheuristica import Metaheuristica
 
-class Grasp(Trainable):
+class Grasp(Metaheuristica,Trainable):
     def __init__(self, state, numIter = 500, numBest = 15, max_time = 1):
         Trainable.__init__(self, 'Grasp')
-        self.state = state 
+        Metaheuristica.__init__(self,state)
         self.numIter = numIter 
         self.numBest = numBest
         self.max_time = max_time
-        self.solution : Annealable = None
+        self.solution : IState = None
     
     def Execute(self, parameters):# -> (float):
         self.numIter = parameters['numIter'] 

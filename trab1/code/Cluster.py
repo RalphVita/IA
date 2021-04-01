@@ -1,10 +1,9 @@
 import numpy as np
 import random
-from SimulatedAnnealing import Annealable
-from HillClimbing import Scalable
+from IState import IState
 from sklearn.utils import shuffle
 
-class Cluster(Annealable, Scalable):
+class Cluster(IState):
     def __init__(self, X, k, grupos = None,centroides = None):
         self.X = X
         self.grupos = grupos
@@ -57,18 +56,18 @@ class Cluster(Annealable, Scalable):
         print('Centroides:', self.centroides)
         print('Pontos:', self.X)
 
-    ##### Annealable ######
+    ##### IState ######
     def Value(self):
         return self.sse
 
-    def GerarVizinho(self):
+    def NextState(self):
         return self.Mutation()
 
     #Compara se os grupos de dois clusters são iguais
     def Equal(self, other):
         return np.array_equal(self.grupos, other.grupos)
 
-    #Mutable methods
+    #IMutable methods
     def Crossover(self,other):
         r = random.randint(0, len(self.grupos) - 1)
         son = np.concatenate((self.grupos[:r], other.grupos[r:]), axis=0)
