@@ -15,6 +15,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from KCentroides import KCentroides
+from OneR import OneR
 
 
 '''
@@ -36,7 +37,7 @@ nomes = [
             'ZeroR', 
             'Aleatório', 
             'Aleatório Estratificado', 
-            #'OneR Probabilístico', 
+            'OneR Probabilístico', 
             'Naive Bayes Gaussiano', 
 
             'KmeansCentroides',
@@ -72,6 +73,7 @@ classificadores =   [
                         get_pipeline(DummyClassifier('most_frequent')), 
                         get_pipeline(DummyClassifier(strategy='uniform')),
                         get_pipeline(DummyClassifier(strategy='stratified')),
+                        get_pipeline(OneR()),
                         get_pipeline(GaussianNB()),
 
                         get_gridSearchCV(KCentroides(algoritimo = 'KMeans'),param_kmeans),
