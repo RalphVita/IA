@@ -18,6 +18,7 @@ class OneR(BaseEstimator):
 
 
         n_caracteristica = x_train.shape[1]
+        
         self.classes = np.unique(y_train)
 
         #Pra cada caracteristica gera um matriz da associação [[caracteristica,valor, classe] ]
@@ -29,6 +30,7 @@ class OneR(BaseEstimator):
         lst = []
         for data in datas:
             data = np.array(data)
+            
             #Pivotei as matrizes usando pandas
             df = pd.DataFrame(data=data,columns=['caracteristica','valor', 'classe'])
             pivot = pd.pivot_table (df, values = "caracteristica", 
@@ -36,6 +38,7 @@ class OneR(BaseEstimator):
                                     aggfunc = "count")
             #Zera os valores nulos
             pivot = pivot.fillna(0)
+
             
             #Adiciona as listas
             lst.append((data[0][0],pivot.max().values))
@@ -45,8 +48,9 @@ class OneR(BaseEstimator):
         #Caracteristica que mais se destaca
         self.caracteristica = int(max(lst, key = lambda x: sum(x[1]))[0])
 
+
         #Tabela de contigencia da caracteristica que mais se destaca
-        self.matriz = np.array(dfs[self.caracteristica])
+        self.matriz = dfs[self.caracteristica]
 
     def predict(self,x_test):
         #Discretiza
@@ -55,7 +59,13 @@ class OneR(BaseEstimator):
 
 
         result = []
+        
+        
         for X in X_bin:
-            array = self.matriz[int(X[self.caracteristica])]
-            result.append(np.random.choice(self.classes,1,p=array/sum(array))[0])
+            #As vezes esse valor caricteristica não foi usado no treino, mas existe no teste. Nesse caso a probabilidade é igual pra todas classes
+            if X[self.caracteristica] in self.matriz.index:
+                array = self.matriz.loc[X[self.caracteristica]]
+                result.append(np.random.choice(self.classes,1,p=array/sum(array))[0])
+            else:
+                result.append(np.random.choice(self.classes,1)[0])
         return result

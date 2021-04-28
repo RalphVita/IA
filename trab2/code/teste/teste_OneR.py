@@ -6,11 +6,11 @@ from sklearn import datasets
 from sklearn.cluster import KMeans
 import pandas as pd
 
-iris = datasets.load_iris()
+iris = datasets.load_breast_cancer()
 iris_X = iris.data
 iris_y = iris.target
 
-est = KBinsDiscretizer(n_bins=8, 
+est = KBinsDiscretizer(n_bins=60, 
                     encode='ordinal', strategy='kmeans').fit(iris_X,iris_y)
 X_bin = est.transform(iris_X)
 #print(X_bin)
@@ -39,14 +39,17 @@ for data in datas:
 __self_pred = max(lst, key = lambda x: sum(x[1]))
 print(__self_pred)
 
-matriz = np.array(dfs[int(__self_pred[0])])
+matriz = dfs[int(__self_pred[0])]
 
 caracteristica = int(__self_pred[0])
 
 result = []
 for X in X_bin:
-    array = matriz[int(X[caracteristica])]
-    result.append(np.random.choice(classes,1,p=array/sum(array))[0])
+    if X[caracteristica] in matriz.index:
+        array = matriz.loc[X[caracteristica]]
+        result.append(np.random.choice(classes,1,p=array/sum(array))[0])
+    else:
+        result.append(np.random.choice(classes,1)[0])
 
 print(result)
     

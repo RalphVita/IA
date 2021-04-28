@@ -49,9 +49,8 @@ nomes = [
         ]
 
 #iris, digits, wine e breast cancer
-iris = datasets.load_iris()
-iris_X = iris.data
-iris_y = iris.target
+datas = [datasets.load_iris(), datasets.load_digits(), datasets.load_wine(), datasets.load_breast_cancer()]
+data_names = ['iris', 'digits', 'wine', 'breast_cancer']
 
 param_kmeans = {'estimator__k': [1, 3, 5, 7]}
 param_kga = {'estimator__k': [1, 3, 5, 7]}
@@ -85,34 +84,51 @@ classificadores =   [
                         get_gridSearchCV(RandomForestClassifier(),param_Floresta)
                     ]
 
-
-lstScores =     [
-                    cross_val_score(classificador, iris_X, iris_y, scoring='accuracy', cv = rskf,n_jobs=-1)
-                    for classificador in classificadores
-                ]
-#print(lstScores)
-tabela =    [
-                {
-                    'Média': scores.mean(),
-                    'Desvio Padrão': scores.std(),
-                    'Limite': stats.norm.interval(0.95, loc=scores.mean(), scale=scores.std()/np.sqrt(len(scores)))
-                }
-                for scores in lstScores
-            ]
-
-df = pd.DataFrame(tabela)
-
-df['Limite Inferior'], df['Limite Superior'] = zip(*df.Limite)
-
-
-print(df)
-
- 
-tabela_pareada =    [
-                        [nome1 if i1 == i2 else ttest_rel(scores1,scores2)[1] if i1 < i2 else wilcoxon (scores1,scores2)[1]
-                            for i2, (nome2, scores2) in enumerate(zip(nomes, lstScores))] 
-                                for i1,(nome1, scores1) in enumerate(zip(nomes, lstScores))
+for name, dataset in zip(data_names,datas):
+    lstScores =     [
+                        cross_val_score(classificador, dataset.data, dataset.target, scoring='accuracy', cv = rskf,n_jobs=-1)
+                        for classificador in classificadores
                     ]
-print(pd.DataFrame(tabela_pareada))
+
+    tabela =    [
+                    {
+                        'Média': scores.mean(),
+                        'Desvio Padrão': scores.std(),
+                        'Limite': stats.norm.interval(0.95, loc=scores.mean(), scale=scores.std()/np.sqrt(len(scores)))
+                    }
+                    for scores in lstScores
+                ]
+
+    #Scores para boxplot
+    lst = [[classificador,scores] for (classificador,scores) in zip(nomes, lstScores)]
+    
+    h = []
+    for l in lst:
+        for (x,y) in zip([l[0]]*len(l[1]),l[1]):
+            h.append([x,y])
+
+    dfScores = pd.DataFrame(h, columns=['Classificador','Acurácia'])
+    #print(dfScores)
+    
+
+    #Tabela de médias
+    dfMedia = pd.DataFrame(tabela)
+    dfMedia['Método'] = nomes
+    dfMedia['Limite Inferior'], dfMedia['Limite Superior'] = zip(*dfMedia.Limite)
+    print(dfMedia)
+
+    
+    tabela_pareada =    [
+                            [nome1 if i1 == i2 else ttest_rel(scores1,scores2)[1] if i1 < i2 else wilcoxon (scores1,scores2)[1]
+                                for i2, (nome2, scores2) in enumerate(zip(nomes, lstScores))] 
+                                    for i1,(nome1, scores1) in enumerate(zip(nomes, lstScores))
+                        ]
+    dfTabelaPareada = pd.DataFrame(tabela_pareada)
+    print(dfTabelaPareada)
+
+
+    dfScores.to_csv(f'result/{name}_scores.csv')
+    dfMedia.to_csv(f'result/{name}_media.csv')
+    dfTabelaPareada.to_csv(f'result/{name}_pareada.csv')
 
 
