@@ -14,6 +14,8 @@ from scipy.stats import ttest_rel, wilcoxon
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from KCentroides import KCentroides
+
 
 '''
 ZeroR, 
@@ -22,8 +24,8 @@ Aleatório Estratificado,
 *OneR Probabilístico, 
 Naive Bayes Gaussiano, 
 
-*KmeansCentroides,
-*KGACentroides, 
+KmeansCentroides,
+KGACentroides, 
 Knn, 
 DistKnn, 
 Árvore de Decisão
@@ -37,8 +39,8 @@ nomes = [
             #'OneR Probabilístico', 
             'Naive Bayes Gaussiano', 
 
-            #'KmeansCentroides',
-            #'KGACentroides', 
+            'KmeansCentroides',
+            'KGACentroides',
             'Knn',
             'DistKnn',
             'Árvore de Decisão',
@@ -46,10 +48,12 @@ nomes = [
         ]
 
 #iris, digits, wine e breast cancer
-iris = datasets.load_digits()
+iris = datasets.load_iris()
 iris_X = iris.data
 iris_y = iris.target
 
+param_kmeans = {'estimator__k': [1, 3, 5, 7]}
+param_kga = {'estimator__k': [1, 3, 5, 7]}
 param_knn = {'estimator__n_neighbors': [1, 3, 5, 7]}
 param_DistKnn = {'estimator__n_neighbors': [1, 3, 5, 7]}
 param_Arvore = {'estimator__max_depth': [None,3, 5, 10]}
@@ -69,15 +73,19 @@ classificadores =   [
                         get_pipeline(DummyClassifier(strategy='uniform')),
                         get_pipeline(DummyClassifier(strategy='stratified')),
                         get_pipeline(GaussianNB()),
+
+                        get_gridSearchCV(KCentroides(algoritimo = 'KMeans'),param_kmeans),
+                        get_gridSearchCV(KCentroides(algoritimo = 'Genetic'),param_kga),
+
                         get_gridSearchCV(KNeighborsClassifier(),param_knn),
                         get_gridSearchCV(KNeighborsClassifier(weights = 'distance'),param_DistKnn),
                         get_gridSearchCV(DecisionTreeClassifier(),param_Arvore),
-                        get_gridSearchCV(RandomForestClassifier(),param_Floresta),
+                        get_gridSearchCV(RandomForestClassifier(),param_Floresta)
                     ]
 
 
 lstScores =     [
-                    cross_val_score(classificador, iris_X, iris_y, scoring='accuracy', cv = rskf,n_jobs=1)
+                    cross_val_score(classificador, iris_X, iris_y, scoring='accuracy', cv = rskf,n_jobs=-1)
                     for classificador in classificadores
                 ]
 #print(lstScores)
