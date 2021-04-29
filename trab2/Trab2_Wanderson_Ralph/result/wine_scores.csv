@@ -1,0 +1,331 @@
+,Classificador,Acurácia
+0,ZeroR,0.3888888888888889
+1,ZeroR,0.3888888888888889
+2,ZeroR,0.3888888888888889
+3,ZeroR,0.3888888888888889
+4,ZeroR,0.3888888888888889
+5,ZeroR,0.3888888888888889
+6,ZeroR,0.3888888888888889
+7,ZeroR,0.3888888888888889
+8,ZeroR,0.4117647058823529
+9,ZeroR,0.47058823529411764
+10,ZeroR,0.3888888888888889
+11,ZeroR,0.3888888888888889
+12,ZeroR,0.3888888888888889
+13,ZeroR,0.3888888888888889
+14,ZeroR,0.3888888888888889
+15,ZeroR,0.3888888888888889
+16,ZeroR,0.3888888888888889
+17,ZeroR,0.3888888888888889
+18,ZeroR,0.4117647058823529
+19,ZeroR,0.47058823529411764
+20,ZeroR,0.3888888888888889
+21,ZeroR,0.3888888888888889
+22,ZeroR,0.3888888888888889
+23,ZeroR,0.3888888888888889
+24,ZeroR,0.3888888888888889
+25,ZeroR,0.3888888888888889
+26,ZeroR,0.3888888888888889
+27,ZeroR,0.3888888888888889
+28,ZeroR,0.4117647058823529
+29,ZeroR,0.47058823529411764
+30,Aleatório,0.5
+31,Aleatório,0.4444444444444444
+32,Aleatório,0.3333333333333333
+33,Aleatório,0.2222222222222222
+34,Aleatório,0.3888888888888889
+35,Aleatório,0.3333333333333333
+36,Aleatório,0.3888888888888889
+37,Aleatório,0.3888888888888889
+38,Aleatório,0.23529411764705882
+39,Aleatório,0.47058823529411764
+40,Aleatório,0.3333333333333333
+41,Aleatório,0.3888888888888889
+42,Aleatório,0.3888888888888889
+43,Aleatório,0.3333333333333333
+44,Aleatório,0.16666666666666666
+45,Aleatório,0.4444444444444444
+46,Aleatório,0.4444444444444444
+47,Aleatório,0.3888888888888889
+48,Aleatório,0.47058823529411764
+49,Aleatório,0.4117647058823529
+50,Aleatório,0.3888888888888889
+51,Aleatório,0.2777777777777778
+52,Aleatório,0.2777777777777778
+53,Aleatório,0.4444444444444444
+54,Aleatório,0.16666666666666666
+55,Aleatório,0.5
+56,Aleatório,0.4444444444444444
+57,Aleatório,0.2777777777777778
+58,Aleatório,0.35294117647058826
+59,Aleatório,0.35294117647058826
+60,Aleatório Estratificado,0.4444444444444444
+61,Aleatório Estratificado,0.3333333333333333
+62,Aleatório Estratificado,0.4444444444444444
+63,Aleatório Estratificado,0.2777777777777778
+64,Aleatório Estratificado,0.3333333333333333
+65,Aleatório Estratificado,0.2777777777777778
+66,Aleatório Estratificado,0.05555555555555555
+67,Aleatório Estratificado,0.3888888888888889
+68,Aleatório Estratificado,0.4117647058823529
+69,Aleatório Estratificado,0.47058823529411764
+70,Aleatório Estratificado,0.2777777777777778
+71,Aleatório Estratificado,0.2777777777777778
+72,Aleatório Estratificado,0.4444444444444444
+73,Aleatório Estratificado,0.2222222222222222
+74,Aleatório Estratificado,0.2222222222222222
+75,Aleatório Estratificado,0.2222222222222222
+76,Aleatório Estratificado,0.2777777777777778
+77,Aleatório Estratificado,0.3888888888888889
+78,Aleatório Estratificado,0.35294117647058826
+79,Aleatório Estratificado,0.29411764705882354
+80,Aleatório Estratificado,0.16666666666666666
+81,Aleatório Estratificado,0.2777777777777778
+82,Aleatório Estratificado,0.3888888888888889
+83,Aleatório Estratificado,0.3888888888888889
+84,Aleatório Estratificado,0.3888888888888889
+85,Aleatório Estratificado,0.2222222222222222
+86,Aleatório Estratificado,0.3333333333333333
+87,Aleatório Estratificado,0.3888888888888889
+88,Aleatório Estratificado,0.23529411764705882
+89,Aleatório Estratificado,0.23529411764705882
+90,OneR Probabilístico,0.6111111111111112
+91,OneR Probabilístico,0.6111111111111112
+92,OneR Probabilístico,0.6666666666666666
+93,OneR Probabilístico,0.6666666666666666
+94,OneR Probabilístico,0.6111111111111112
+95,OneR Probabilístico,0.6666666666666666
+96,OneR Probabilístico,0.6111111111111112
+97,OneR Probabilístico,0.5555555555555556
+98,OneR Probabilístico,0.47058823529411764
+99,OneR Probabilístico,0.5294117647058824
+100,OneR Probabilístico,0.7777777777777778
+101,OneR Probabilístico,0.5
+102,OneR Probabilístico,0.4444444444444444
+103,OneR Probabilístico,0.6666666666666666
+104,OneR Probabilístico,0.6666666666666666
+105,OneR Probabilístico,0.3888888888888889
+106,OneR Probabilístico,0.5555555555555556
+107,OneR Probabilístico,0.7777777777777778
+108,OneR Probabilístico,0.7647058823529411
+109,OneR Probabilístico,0.5882352941176471
+110,OneR Probabilístico,0.6666666666666666
+111,OneR Probabilístico,0.7222222222222222
+112,OneR Probabilístico,0.6666666666666666
+113,OneR Probabilístico,0.3333333333333333
+114,OneR Probabilístico,0.6666666666666666
+115,OneR Probabilístico,0.5
+116,OneR Probabilístico,0.6111111111111112
+117,OneR Probabilístico,0.7222222222222222
+118,OneR Probabilístico,0.6470588235294118
+119,OneR Probabilístico,0.47058823529411764
+120,Naive Bayes Gaussiano,1.0
+121,Naive Bayes Gaussiano,1.0
+122,Naive Bayes Gaussiano,1.0
+123,Naive Bayes Gaussiano,1.0
+124,Naive Bayes Gaussiano,0.8888888888888888
+125,Naive Bayes Gaussiano,1.0
+126,Naive Bayes Gaussiano,1.0
+127,Naive Bayes Gaussiano,1.0
+128,Naive Bayes Gaussiano,1.0
+129,Naive Bayes Gaussiano,0.8823529411764706
+130,Naive Bayes Gaussiano,1.0
+131,Naive Bayes Gaussiano,1.0
+132,Naive Bayes Gaussiano,1.0
+133,Naive Bayes Gaussiano,1.0
+134,Naive Bayes Gaussiano,1.0
+135,Naive Bayes Gaussiano,0.8333333333333334
+136,Naive Bayes Gaussiano,1.0
+137,Naive Bayes Gaussiano,1.0
+138,Naive Bayes Gaussiano,1.0
+139,Naive Bayes Gaussiano,0.8823529411764706
+140,Naive Bayes Gaussiano,1.0
+141,Naive Bayes Gaussiano,1.0
+142,Naive Bayes Gaussiano,1.0
+143,Naive Bayes Gaussiano,0.9444444444444444
+144,Naive Bayes Gaussiano,1.0
+145,Naive Bayes Gaussiano,0.9444444444444444
+146,Naive Bayes Gaussiano,1.0
+147,Naive Bayes Gaussiano,0.9444444444444444
+148,Naive Bayes Gaussiano,0.8823529411764706
+149,Naive Bayes Gaussiano,1.0
+150,KmeansCentroides,1.0
+151,KmeansCentroides,1.0
+152,KmeansCentroides,1.0
+153,KmeansCentroides,0.9444444444444444
+154,KmeansCentroides,0.9444444444444444
+155,KmeansCentroides,1.0
+156,KmeansCentroides,1.0
+157,KmeansCentroides,1.0
+158,KmeansCentroides,1.0
+159,KmeansCentroides,0.8823529411764706
+160,KmeansCentroides,1.0
+161,KmeansCentroides,0.8888888888888888
+162,KmeansCentroides,1.0
+163,KmeansCentroides,1.0
+164,KmeansCentroides,1.0
+165,KmeansCentroides,0.8333333333333334
+166,KmeansCentroides,1.0
+167,KmeansCentroides,1.0
+168,KmeansCentroides,1.0
+169,KmeansCentroides,0.8823529411764706
+170,KmeansCentroides,0.9444444444444444
+171,KmeansCentroides,1.0
+172,KmeansCentroides,1.0
+173,KmeansCentroides,0.9444444444444444
+174,KmeansCentroides,0.9444444444444444
+175,KmeansCentroides,1.0
+176,KmeansCentroides,0.9444444444444444
+177,KmeansCentroides,0.9444444444444444
+178,KmeansCentroides,0.9411764705882353
+179,KmeansCentroides,1.0
+180,KGACentroides,1.0
+181,KGACentroides,1.0
+182,KGACentroides,1.0
+183,KGACentroides,0.9444444444444444
+184,KGACentroides,0.9444444444444444
+185,KGACentroides,1.0
+186,KGACentroides,1.0
+187,KGACentroides,1.0
+188,KGACentroides,1.0
+189,KGACentroides,0.8823529411764706
+190,KGACentroides,1.0
+191,KGACentroides,1.0
+192,KGACentroides,1.0
+193,KGACentroides,1.0
+194,KGACentroides,1.0
+195,KGACentroides,0.8333333333333334
+196,KGACentroides,1.0
+197,KGACentroides,1.0
+198,KGACentroides,1.0
+199,KGACentroides,0.9411764705882353
+200,KGACentroides,0.9444444444444444
+201,KGACentroides,1.0
+202,KGACentroides,1.0
+203,KGACentroides,0.9444444444444444
+204,KGACentroides,0.9444444444444444
+205,KGACentroides,1.0
+206,KGACentroides,0.9444444444444444
+207,KGACentroides,0.9444444444444444
+208,KGACentroides,0.9411764705882353
+209,KGACentroides,1.0
+210,Knn,1.0
+211,Knn,1.0
+212,Knn,1.0
+213,Knn,0.9444444444444444
+214,Knn,0.9444444444444444
+215,Knn,0.9444444444444444
+216,Knn,1.0
+217,Knn,0.9444444444444444
+218,Knn,1.0
+219,Knn,0.8235294117647058
+220,Knn,0.9444444444444444
+221,Knn,0.9444444444444444
+222,Knn,1.0
+223,Knn,1.0
+224,Knn,1.0
+225,Knn,0.7777777777777778
+226,Knn,1.0
+227,Knn,1.0
+228,Knn,1.0
+229,Knn,0.8823529411764706
+230,Knn,0.9444444444444444
+231,Knn,0.9444444444444444
+232,Knn,0.9444444444444444
+233,Knn,0.9444444444444444
+234,Knn,1.0
+235,Knn,1.0
+236,Knn,1.0
+237,Knn,0.9444444444444444
+238,Knn,0.9411764705882353
+239,Knn,1.0
+240,DistKnn,1.0
+241,DistKnn,1.0
+242,DistKnn,1.0
+243,DistKnn,0.9444444444444444
+244,DistKnn,0.9444444444444444
+245,DistKnn,0.9444444444444444
+246,DistKnn,1.0
+247,DistKnn,0.9444444444444444
+248,DistKnn,1.0
+249,DistKnn,0.8235294117647058
+250,DistKnn,0.9444444444444444
+251,DistKnn,0.9444444444444444
+252,DistKnn,1.0
+253,DistKnn,1.0
+254,DistKnn,1.0
+255,DistKnn,0.7777777777777778
+256,DistKnn,1.0
+257,DistKnn,1.0
+258,DistKnn,1.0
+259,DistKnn,0.8823529411764706
+260,DistKnn,0.9444444444444444
+261,DistKnn,0.9444444444444444
+262,DistKnn,0.9444444444444444
+263,DistKnn,0.9444444444444444
+264,DistKnn,1.0
+265,DistKnn,1.0
+266,DistKnn,1.0
+267,DistKnn,0.9444444444444444
+268,DistKnn,0.8823529411764706
+269,DistKnn,1.0
+270,Árvore de Decisão,0.9444444444444444
+271,Árvore de Decisão,1.0
+272,Árvore de Decisão,0.8333333333333334
+273,Árvore de Decisão,0.8888888888888888
+274,Árvore de Decisão,0.7777777777777778
+275,Árvore de Decisão,0.8333333333333334
+276,Árvore de Decisão,0.9444444444444444
+277,Árvore de Decisão,0.9444444444444444
+278,Árvore de Decisão,0.9411764705882353
+279,Árvore de Decisão,0.7647058823529411
+280,Árvore de Decisão,0.8333333333333334
+281,Árvore de Decisão,0.9444444444444444
+282,Árvore de Decisão,0.9444444444444444
+283,Árvore de Decisão,1.0
+284,Árvore de Decisão,0.9444444444444444
+285,Árvore de Decisão,0.6666666666666666
+286,Árvore de Decisão,0.9444444444444444
+287,Árvore de Decisão,0.8888888888888888
+288,Árvore de Decisão,1.0
+289,Árvore de Decisão,0.8823529411764706
+290,Árvore de Decisão,0.9444444444444444
+291,Árvore de Decisão,0.8333333333333334
+292,Árvore de Decisão,0.8333333333333334
+293,Árvore de Decisão,0.8888888888888888
+294,Árvore de Decisão,0.8333333333333334
+295,Árvore de Decisão,0.8333333333333334
+296,Árvore de Decisão,0.9444444444444444
+297,Árvore de Decisão,0.8333333333333334
+298,Árvore de Decisão,0.9411764705882353
+299,Árvore de Decisão,0.9411764705882353
+300,Florestas de Árvores,1.0
+301,Florestas de Árvores,1.0
+302,Florestas de Árvores,0.9444444444444444
+303,Florestas de Árvores,1.0
+304,Florestas de Árvores,0.8888888888888888
+305,Florestas de Árvores,1.0
+306,Florestas de Árvores,1.0
+307,Florestas de Árvores,1.0
+308,Florestas de Árvores,1.0
+309,Florestas de Árvores,0.9411764705882353
+310,Florestas de Árvores,1.0
+311,Florestas de Árvores,1.0
+312,Florestas de Árvores,1.0
+313,Florestas de Árvores,1.0
+314,Florestas de Árvores,1.0
+315,Florestas de Árvores,0.8888888888888888
+316,Florestas de Árvores,1.0
+317,Florestas de Árvores,1.0
+318,Florestas de Árvores,1.0
+319,Florestas de Árvores,0.9411764705882353
+320,Florestas de Árvores,0.9444444444444444
+321,Florestas de Árvores,1.0
+322,Florestas de Árvores,1.0
+323,Florestas de Árvores,0.9444444444444444
+324,Florestas de Árvores,1.0
+325,Florestas de Árvores,1.0
+326,Florestas de Árvores,1.0
+327,Florestas de Árvores,0.9444444444444444
+328,Florestas de Árvores,1.0
+329,Florestas de Árvores,1.0
