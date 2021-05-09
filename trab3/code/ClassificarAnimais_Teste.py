@@ -30,7 +30,7 @@ class ClassificarAnimais(KnowledgeEngine):
     def e_passaro(self):
         print("Passaro")
 
-    @Rule(AND(Fact(voa=False),
+    @Rule(AND(NOT(Fact(voa=True)),
               Fact(tipo='ave')))
     def e_pinguim(self):
         print("Pinguim")
