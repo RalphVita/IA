@@ -10,32 +10,36 @@ class ClassificarAnimais(KnowledgeEngine):
         #yield Fact(feature="voa")
 
 
+    def Encontrou(self,nome):
+        print(nome)
+        self.declare(Fact(fim=True))
+
+
     ''' Classe '''
     
     # Amamenta?
-    @Rule(NOT(Fact(amamenta=W())))
+    @Rule(AND(Fact(animal=True),NOT(Fact(amamenta=W())),NOT(Fact(tipo=W()))))
     def ask_amamenta(self):
         self.declare(Fact(amamenta=reposta(input("Amamenta? "))))
-        #nadadeiras = temperatura_constante = penas = pele_umida = False
-
+        
 
      # Nadadeiras?
-    @Rule(NOT(Fact(nadadeiras=W())))
+    @Rule(AND(Fact(animal=True),NOT(Fact(nadadeiras=W())),NOT(Fact(tipo=W()))))
     def ask_nadadeiras(self):
         self.declare(Fact(nadadeiras=reposta(input("Tem nadadeiras? "))))
 
      # Répitil?
-    @Rule(NOT(Fact(temperatura_constante=W())))
+    @Rule(AND(Fact(animal=True),NOT(Fact(temperatura_constante=W())),NOT(Fact(tipo=W()))))
     def ask_temperatura_constante(self):
         self.declare(Fact(temperatura_constante=reposta(input("Temperatura corporal constante? "))))
 
      # Penas?
-    @Rule(NOT(Fact(penas=W())))
+    @Rule(AND(Fact(animal=True),NOT(Fact(penas=W())),NOT(Fact(tipo=W()))))
     def ask_pena(self):
         self.declare(Fact(penas=reposta(input("Tem pena? "))))
 
     # Anfíbios?
-    @Rule(NOT(Fact(pele_umida=W())))
+    @Rule(AND(Fact(animal=True),NOT(Fact(pele_umida=W())),NOT(Fact(tipo=W())),Fact(temperatura_constante=False)))
     def ask_pele_umida(self):
         self.declare(Fact(pele_umida=reposta(input("Pele fina e úmida? "))))
 
@@ -45,7 +49,7 @@ class ClassificarAnimais(KnowledgeEngine):
 
     # Voa?
     @Rule(AND(
-        NOT(Fact(voa=W())),
+        NOT(Fact(voa=W())), NOT(Fact(fim=True)),
             OR( Fact(tipo='mamifero'),
                 Fact(tipo='ave'))
         ))
@@ -53,54 +57,65 @@ class ClassificarAnimais(KnowledgeEngine):
         self.declare(Fact(voa=reposta(input("Voa? "))))
 
     # Habitáti Marinho ?
-    @Rule(NOT(Fact(marinho=W())))
+    @Rule(AND(
+            NOT(Fact(marinho=W())), NOT(Fact(fim=True)),
+            Fact(tipo=W())))
     def ask_marinho(self):
         self.declare(Fact(marinho=reposta(input("Tem habitáti marinho? "))))
 
 
     # Cauda longa ?
-    @Rule(NOT(Fact(cauda_longa=W())))
+    @Rule(AND(  NOT(Fact(cauda_longa=W())), NOT(Fact(fim=True)),
+                Fact(tipo='anfibio')))
     def ask_cauda_longa(self):
         self.declare(Fact(cauda_longa=reposta(input("Tem a cauda longa? "))))
 
 
     # Bípede ?
-    @Rule(NOT(Fact(bipede=W())))
+    @Rule(AND(  NOT(Fact(bipede=W())), NOT(Fact(fim=True)),
+                Fact(tipo='mamifero')))
     def ask_bipede(self):
         self.declare(Fact(bipede=reposta(input("É bípede? "))))
 
     # Onívoro ?
-    @Rule(NOT(Fact(onivoro=W())))
+    @Rule(AND(  OR(Fact(tipo='repitil'),Fact(tipo='mamifero')), NOT(Fact(fim=True)),
+                NOT(Fact(onivoro=W()))))
     def ask_onivoro(self):
         self.declare(Fact(onivoro=reposta(input("É onívoro? "))))
 
     # Carnívoro ?
-    @Rule(NOT(Fact(carnivoro=W())))
+    @Rule(AND(  Fact(tipo='ave'), NOT(Fact(fim=True)),
+                NOT(Fact(carnivoro=W()))))
     def ask_carnivoro(self):
         self.declare(Fact(carnivoro=reposta(input("É carnívoro? "))))
 
-    # Onívoro ?
-    @Rule(NOT(Fact(muda_cor=W())))
+    # Muda de cor ?
+    @Rule(AND(  Fact(tipo='repitil'), NOT(Fact(fim=True)),
+                NOT(Fact(muda_cor=W()))))
     def ask_muda_cor(self):
         self.declare(Fact(muda_cor=reposta(input("Muda de cor? "))))
     
     # Esqueleto cartilaginoso ?
-    @Rule(NOT(Fact(esqueleto_cart=W())))
+    @Rule(AND(  Fact(tipo='peixe'), NOT(Fact(fim=True)),
+                NOT(Fact(esqueleto_cart=W()))))
     def ask_esqueleto_cart(self):
         self.declare(Fact(esqueleto_cart=reposta(input("Tem o esqueleto cartilaginoso ? "))))
     
     # Corpo achatado ?
-    @Rule(NOT(Fact(achatado=W())))
+    @Rule(AND(  Fact(tipo='peixe'), NOT(Fact(fim=True)),
+                NOT(Fact(achatado=W()))))
     def ask_achatado(self):
         self.declare(Fact(achatado=reposta(input("O corpo é achatado? "))))
 
     # Infla  ?
-    @Rule(NOT(Fact(infla=W())))
+    @Rule(AND(  Fact(tipo='peixe'), NOT(Fact(fim=True)),
+                NOT(Fact(infla=W()))))
     def ask_infla(self):
         self.declare(Fact(infla=reposta(input("O corpo infla? "))))
 
     # Felino ?
-    @Rule(NOT(Fact(felino=W())))
+    @Rule(AND(  Fact(tipo='mamifero'), NOT(Fact(fim=True)),
+                NOT(Fact(felino=W()))))
     def ask_felino(self):
         self.declare(Fact(felino=reposta(input("É um felino (unhas retraem)? "))))
 
@@ -111,32 +126,36 @@ class ClassificarAnimais(KnowledgeEngine):
     ''' Mamíferos'''
 
     @Rule(Fact(amamenta=True))
-    def e_ave(self):
+    def e_mamifero(self):
         self.declare(Fact(tipo='mamifero'))
+        
 
     # Baleia
     @Rule(AND(  Fact(tipo='mamifero'),
-                Fact(voa=False), 
-                Fact(bipede=False),
+                NOT(Fact(voa=True)), 
+                NOT(Fact(bipede=True)),
                 Fact(marinho=True)))
     def e_baleia(self):
-        print("Baleia")
+        self.Encontrou("Baleia")
+        
 
     # Morgego
     @Rule(AND(  Fact(voa=True),
-                Fact(marinho=False),
-                Fact(bipede=False),
+                NOT(Fact(marinho=True)),
+                NOT(Fact(bipede=True)),
                 Fact(tipo='mamifero')))
     def e_morcego(self):
-        print("Morcego")
+        self.Encontrou("Morcego")
+        
 
     # Humano
     @Rule(AND(  Fact(bipede=True),
-                Fact(voa=False), 
-                Fact(marinho=False),
+                NOT(Fact(voa=True)), 
+                NOT(Fact(marinho=True)),
                 Fact(tipo='mamifero')))
     def e_humano(self):
-        print("Humano")
+        self.Encontrou("Humano")
+        
 
     # Urso
     @Rule(AND(  Fact(bipede=False),
@@ -145,7 +164,8 @@ class ClassificarAnimais(KnowledgeEngine):
                 Fact(marinho=False),
                 Fact(tipo='mamifero')))
     def e_urso(self):
-        print("Urso")
+        self.Encontrou("Urso")
+        
 
     # Cão
     @Rule(AND(  Fact(bipede=False),
@@ -154,13 +174,15 @@ class ClassificarAnimais(KnowledgeEngine):
                 Fact(marinho=False),
                 Fact(tipo='mamifero')))
     def e_cao(self):
-        print("Cão")
+        self.Encontrou("Cão")
     
 
     ''' Peixes '''
     @Rule(Fact(nadadeiras=True))
-    def e_ave(self):
+    def e_peixe(self):
         self.declare(Fact(tipo='peixe'))
+        self.declare(Fact(marinho=True))
+        
 
     # Tubarão
     @Rule(AND(  Fact(tipo='peixe'),
@@ -169,7 +191,8 @@ class ClassificarAnimais(KnowledgeEngine):
                 NOT(Fact(marinho=False))
                 ))
     def e_tubarao(self):
-        print("Tubarão")
+        self.Encontrou("Tubarão")
+        
 
     # Arraia
     @Rule(AND(  Fact(tipo='peixe'),
@@ -178,7 +201,8 @@ class ClassificarAnimais(KnowledgeEngine):
                 NOT(Fact(marinho=False))
                 ))
     def e_arraia(self):
-        print("Arraia")
+        self.Encontrou("Arraia")
+        
 
      # Baiacu
     @Rule(AND(  Fact(tipo='peixe'),
@@ -187,7 +211,8 @@ class ClassificarAnimais(KnowledgeEngine):
                 NOT(Fact(marinho=False))
                 ))
     def e_baiacu(self):
-        print("Baiacu")
+        self.Encontrou("Baiacu")
+        
 
      # Atum
     @Rule(AND(  Fact(tipo='peixe'),
@@ -198,7 +223,8 @@ class ClassificarAnimais(KnowledgeEngine):
                 NOT(Fact(marinho=False))
                 ))
     def e_atum(self):
-        print("Atum")
+        self.Encontrou("Atum")
+        
 
 
     ''' Répitil '''
@@ -206,33 +232,39 @@ class ClassificarAnimais(KnowledgeEngine):
         Fact(temperatura_constante=False),
         Fact(pele_umida=False)
         ))
-    def e_ave(self):
+    def e_repitil(self):
         self.declare(Fact(tipo='repitil'))
+        
 
     # Jacaré
     @Rule(AND(  Fact(tipo='repitil'),
-                NOT(Fact(voa=True)), 
-                NOT(Fact(marinho=False))
+                Fact(marinho=True),
+                Fact(onivoro=False),
+                Fact(muda_cor=False)
                 ))
     def e_jacare(self):
-        print("Jacaré")
+        self.Encontrou("Jacaré")
+        
 
     # Cobra
     @Rule(AND(  Fact(tipo='repitil'),
                 NOT(Fact(voa=True)), 
-                Fact(marinho=False)
+                Fact(marinho=False),
+                Fact(muda_cor=False)
                 ))
     def e_cobra(self):
-        print("Cobra")
+        self.Encontrou("Cobra")
+        
 
      # Tartaruga
     @Rule(AND(  Fact(tipo='repitil'),
-                Fact(onivoro=True), 
-                NOT(Fact(voa=True)), 
-                NOT(Fact(marinho=False))
+                Fact(onivoro=True),  
+                NOT(Fact(marinho=False)),
+                Fact(muda_cor=False)
                 ))
     def e_tartaruga(self):
-        print("Tartaruga")
+        self.Encontrou("Tartaruga")
+        
 
      # Camaleão
     @Rule(AND(  Fact(tipo='repitil'),
@@ -241,7 +273,8 @@ class ClassificarAnimais(KnowledgeEngine):
                 NOT(Fact(marinho=False))
                 ))
     def e_camaleao(self):
-        print("Camaleão")
+        self.Encontrou("Camaleão")
+        
 
 
     ''' Aves '''
@@ -249,28 +282,34 @@ class ClassificarAnimais(KnowledgeEngine):
     @Rule(Fact(penas=True))
     def e_ave(self):
         self.declare(Fact(tipo='ave'))
+        
 
     # Pinguim
     @Rule(AND(Fact(tipo='ave'),
               Fact(voa=False)))
     def e_pinguim(self):
-        print("Pinguim")
+        self.Encontrou("Pinguim")
+        
 
     # Gavião
     @Rule(AND(Fact(tipo='ave'),
               NOT(Fact(voa=False)),
-              Fact(carnivoro=True)
+              Fact(carnivoro=True),
+              Fact(marinho=False)
               ))
     def e_gaviao(self):
-        print("Gavião")
+        self.Encontrou("Gavião")
+        
 
     # Beija-flor
     @Rule(AND(Fact(tipo='ave'),
               NOT(Fact(voa=False)),
-              Fact(carnivoro=False)
+              Fact(carnivoro=False),
+              Fact(marinho=False)
               ))
     def e_beijaflor(self):
-        print("Beija-flor")
+        self.Encontrou("Beija-flor")
+        
     
     # Gaivota
     @Rule(AND(Fact(tipo='ave'),
@@ -278,7 +317,8 @@ class ClassificarAnimais(KnowledgeEngine):
               Fact(marinho=True)
               ))
     def e_gaivota(self):
-        print("Gaivota")
+        self.Encontrou("Gaivota")
+        
 
     
     ''' Anfíbio '''
@@ -286,8 +326,9 @@ class ClassificarAnimais(KnowledgeEngine):
         Fact(temperatura_constante=False),
         Fact(pele_umida=True)
         ))
-    def e_ave(self):
+    def e_anfibio(self):
         self.declare(Fact(tipo='anfibio'))
+        
 
     # Sapo
     @Rule(AND(  Fact(tipo='anfibio'),
@@ -296,7 +337,8 @@ class ClassificarAnimais(KnowledgeEngine):
                 NOT(Fact(marinho=False))
                 ))
     def e_sapo(self):
-        print("Sapo")
+        self.Encontrou("Sapo")
+        
 
     # Salamandra
     @Rule(AND(  Fact(tipo='anfibio'),
@@ -305,7 +347,8 @@ class ClassificarAnimais(KnowledgeEngine):
                 NOT(Fact(marinho=False))
                 ))
     def e_salamandra(self):
-        print("Salamandra")
+        self.Encontrou("Salamandra")
+        
 
 
 
@@ -314,7 +357,12 @@ class ClassificarAnimais(KnowledgeEngine):
     ''' Leão '''
     # Leão
     @Rule(AND(  Fact(tipo='mamifero'),
-                Fact(felino=True)
+                Fact(felino=True),
+                NOT(Fact(bipede=True)),
+                NOT(Fact(voa=True)), 
+                NOT(Fact(onivoro=True)),
+                NOT(Fact(marinho=True)),
                 ))
     def e_leao(self):
-        print("Leão")        
+        self.Encontrou("Leão")
+           
