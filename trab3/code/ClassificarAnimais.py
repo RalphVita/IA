@@ -7,12 +7,14 @@ class ClassificarAnimais(KnowledgeEngine):
     @DefFacts()
     def _initial_features(self):
         yield Fact(animal=True)
+        self.encontrou = False
         #yield Fact(feature="voa")
 
 
     def Encontrou(self,nome):
         print(nome)
         self.declare(Fact(fim=True))
+        self.encontrou = True
 
 
     ''' Classe '''
@@ -170,7 +172,7 @@ class ClassificarAnimais(KnowledgeEngine):
     # Cão
     @Rule(AND(  Fact(bipede=False),
                 Fact(voa=False), 
-                Fact(onivoro=True),
+                Fact(onivoro=False),
                 Fact(marinho=False),
                 Fact(tipo='mamifero')))
     def e_cao(self):
