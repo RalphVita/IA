@@ -7,21 +7,21 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('./result/resultTeste.csv')
 
 #Problema = [Base,K]
-print(df)
+#print(df)
 #print(df.groupby(['Heuristica','Base','K'])['Média'].transform(lambda x : zscore(x)))
 df['z-score'] = df.groupby(['Base','K'])['Média'].transform(lambda x : zscore(x))
 
 df['Rank'] = df.groupby(['Base','K'])['z-score'].rank()#.transform(lambda x : zscore(x))
 
-print(df.to_string())
+#print(df.to_string())
 
 #dfA3 = df[df['Heuristica'] == 'Genético']
 
 
-dfA3 = df
-dfA3['Problema'] = dfA3['Base'].map(str) + '-' + dfA3['K'].map(str)
-dfA3 =  dfA3.pivot(index=['Problema'], columns=["Heuristica",'Configuração'], values="Rank")
-print(dfA3.to_latex())
+# dfA3 = df
+# dfA3['Problema'] = dfA3['Base'].map(str) + '-' + dfA3['K'].map(str)
+# dfA3 =  dfA3.pivot(index=['Problema'], columns=["Heuristica",'Configuração'], values="Rank")
+# print(dfA3.to_latex())
 
 
 
@@ -34,7 +34,7 @@ dfT = df.groupby(['Heuristica','Configuração']).agg(
     })
 
 print(dfT.to_string())
-exit()
+#exit()
 
 
 
@@ -59,7 +59,14 @@ print(dfMelhores)
 
 def BocPlotTreino(carac = 'z-score'):
     #5 Melhores por Heuristica
+
     
+
+    df['Heuristica'] = df['Heuristica'].map(str) + '-' + df['Configuração'].map(str)
+
+   
+
+
     sns.set_theme()
     df5MelhoresPorHeuristica = df.sort_values(['Heuristica','z-score','Rank'], ascending=True)#.groupby('Heuristica').head(5)
     df5MelhoresPorHeuristica = df5MelhoresPorHeuristica.reset_index()
@@ -68,15 +75,17 @@ def BocPlotTreino(carac = 'z-score'):
     #plt.xticks(rotation='vertical')
     #df5MelhoresPorHeuristica.to_csv('result/analise/5MelhoresPorHeuristica.csv')
     ax = sns.boxplot(x="Heuristica", y=carac, data=df5MelhoresPorHeuristica)
+    #plt.setp(['Genético', 'Grasp-HP1', 'Grasp-HP2','K-means','Simulated A.'])
+    ax.set_xticklabels(['Genético', 'Grasp-HP1', 'Grasp-HP2','K-means','Simulated A.'])
     #plt.title('Boxplot das médias de tempo por Metahurística')
 
 def Plot5Melhores():
-    # plt.title('Boxplot das médias de Z-score por Metahurística')    
-    # BocPlotTreino()
+    plt.title('Boxplot das médias de Z-score por Metahurística')    
+    BocPlotTreino()
 
-    plt.title('Boxplot das médias de tempo por Metahurística')
-    # #plt.ylim(1,1.09)
-    BocPlotTreino('Tempo médio')
+    # plt.title('Boxplot das médias de tempo por Metahurística')
+    # # #plt.ylim(1,1.09)
+    # BocPlotTreino('Tempo médio')
 
     plt.show()
 
